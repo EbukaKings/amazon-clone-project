@@ -38,6 +38,13 @@ export function addToCart(productId) {
                   deliveryOptionId: '1'
               });
           }
+          const added = document.querySelector(`.added-to-cart[data-product-id="${productId}"]`);
+        //   const added = (document.querySelector(`.added-to-cart-${productId}`));
+        added.classList.add('add-on-click');
+        setTimeout(() => {
+            added.classList.remove('add-on-click');
+          }, 2000);
+
           saveToStorage();
   }
 

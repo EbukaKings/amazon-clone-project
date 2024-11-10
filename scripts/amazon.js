@@ -53,7 +53,7 @@ export function renderProductsGrid() {
 
               <div class="product-spacer"></div>
 
-              <div class="added-to-cart">
+              <div class="added-to-cart" data-product-id="${product.id}">
                 <img src="images/icons/checkmark.png">
                 Added
               </div>
