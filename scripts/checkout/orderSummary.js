@@ -24,7 +24,7 @@ cart.forEach((cartItem) => {
 
     
     cartSummarryHTML += `
-    <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
+    <div class="cart-item-container js-cart-item-container-${matchingProduct.id}" data-product-id="${matchingProduct.id}">
             <div class="delivery-date">
               Delivery date: ${dateString}
             </div>
@@ -47,6 +47,8 @@ cart.forEach((cartItem) => {
                   <span class="update-quantity-link link-primary js-update-link" data-product-id="${matchingProduct.id}">
                     Update
                   </span>
+                  <input class="quantity-input" type="number" value="1" min="0" />
+                  <span class"save-quantity-link link-primary">Save</span>
                   <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
                     Delete
                   </span>
@@ -127,7 +129,9 @@ checkoutNumber()
 document.querySelectorAll('.js-update-link').forEach((link) => {
   link.addEventListener('click', () => {
     const update = (link.dataset.productId)
-    console.log(update)
+    console.log(update);
+    const productContainer = document.querySelector(`[js-cart-item-container-${matchingProduct.id}]`);
+
   })
 })
 
