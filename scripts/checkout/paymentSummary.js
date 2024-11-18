@@ -35,7 +35,7 @@ export function renderPaymentSummary() {
 
           <div class="payment-summary-row subtotal-row">
             <div>Total before tax:</div>
-            <div class="payment-summary-money">$47.74</div>
+            <div class="payment-summary-money">$${formatCurrency(totalBeforeTaxCents)}</div>
           </div>
 
           <div class="payment-summary-row">
