@@ -1,10 +1,11 @@
 import { formatCurrency } from "../scripts/utils/money.js";
+console.log('test suite: formatCurrency')
 
 console.log('coverts cents into dollers')
 
 if (formatCurrency(2095) === "20.95") {
     console.log("passed")
-} else {
+} else { 
     console.log("Failed")
 }
 console.log('works with 0')
